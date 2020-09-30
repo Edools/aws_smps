@@ -1,7 +1,5 @@
 # AWS systems manager parameter store PHP class
 
-See [index.php](https://github.com/nodesocket/aws_smps/blob/master/index.php) for full examples.
-
 ## API
 
 ```

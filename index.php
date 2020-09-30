@@ -2,7 +2,7 @@
     require __DIR__ . '/AWS_SMPS.php';
 
     try {
-        $smps = new AWS_SMPS('aws-region', 'aws-profile');
+        $smps = new AWS_SMPS('us-east-1', 'edools');
 
         $smps->put(AWS_SMPS::STRING, 'foo-string', 'bar', 'test string parameter');
         $smps->put(AWS_SMPS::STRING_LIST, 'foo-string-list', 'a,b,c,d', 'test string list parameter');
@@ -19,6 +19,8 @@
         $path_parameter = $smps->get_path('/p');
 
         $list_all_parameters = $smps->list();
+
+        echo($list_all_parameters);
 
         $smps->delete([
             'foo-string',
